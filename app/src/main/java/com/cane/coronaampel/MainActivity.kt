@@ -3,6 +3,7 @@ package com.cane.coronaampel
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import kotlinx.coroutines.*
 import android.util.Log
 import android.view.View
@@ -25,9 +26,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun updateUI(ampel:Ampel){
-        cv_r.setCardBackgroundColor(getColorFromTLColor(ampel.indicator_R.indicatorColor))
-        cv_intensiv.setCardBackgroundColor(getColorFromTLColor(ampel.indicator_Intensivauslastung.indicatorColor))
-        cv_ni.setCardBackgroundColor(getColorFromTLColor(ampel.indicator_Neuinfektionen.indicatorColor))
+
+runOnUiThread {
+    cv_intensiv.setIndicator(ampel.indicator_Intensivauslastung)
+    cv_r.setIndicator(ampel.indicator_R)
+    cv_ni.setIndicator(ampel.indicator_Neuinfektionen)
+}
+
     }
     fun getColorFromTLColor(col:Ampelfarbe): Int{
         when(col){

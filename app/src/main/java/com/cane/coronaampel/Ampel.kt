@@ -6,7 +6,7 @@ class Ampel (val rLine:String , val niLine:String, val ibLine:String){
 
     val indicator_R = Indikator("R Wert", rLine)
     val indicator_Neuinfektionen = Indikator("Neuinfektionen", niLine)
-    val indicator_Intensivauslastung = Indikator("Intensivbetten Auslastun", ibLine)
+    val indicator_Intensivauslastung = Indikator("Intensivbetten Auslastung", ibLine)
 
 
     override fun toString():String{
