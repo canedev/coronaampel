@@ -3,4 +3,15 @@
     <string name="update">Aktualisieren</string>
     <string name="about">Über</string>
     <string name="licenses">Open Source Lizenzen</string>
+    <string name="red">Rot</string>
+    <string name="green">Grün</string>
+    <string name="yellow">Gelb</string>
+    <string name="info_r">R-Wert &lt; 1,1 = Grün\nR-Wert mindestens 3 Mal in Folge ≥ 1,1 = Gelb\nR-Wert mindestens 3 Mal in Folge ≥ 1,2 = Rot</string>
+    <string name="info_neuinfektionen">Zahl &lt; 20 je 100.000 Einwohner*innen = Grün\nZahl ≥ 20 je 100.000 Einwohner*innen = Gelb\nZahl ≥ 30 je 100.000 Einwohner*innen = Rot</string>
+    <string name="info_auslastung">Anteil &lt; 15 % = Grün\nAnteil ≥ 15 % = Gelb\nAnteil ≥ 25 % = Rot</string>
+    <string name="unknown">unbekannt</string>
+    <string name="tv_pressemitteilung">Pressemitteilung</string>
+    <string name="about_text">Die App soll einen schnellen Überblick über die Berliner Corona Ampel geben. Dafür wird die jeweils aktuelle Pressemitteilung der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung abgerufen und ausgewertet.</string>
+    <string name="about_author">Author: Carsten Neumann canedev@neumannmail.com</string>
+
 </resources>

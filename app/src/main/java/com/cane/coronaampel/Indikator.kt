@@ -2,7 +2,7 @@ package com.cane.coronaampel
 
 import android.util.Log
 
-class Indikator (val title: String, line:String){
+class Indikator(val title: String, line: String, val info: Int){
 
     val indicatorValue = extractNumber(line)
     val indicatorColor = extractColor(line)

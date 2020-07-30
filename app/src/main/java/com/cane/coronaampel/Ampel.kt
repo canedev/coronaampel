@@ -1,12 +1,21 @@
 package com.cane.coronaampel
 
-import android.util.Log
+import android.os.Parcel
+import android.os.Parcelable
+import java.util.*
 
-class Ampel (val rLine:String , val niLine:String, val ibLine:String){
+class Ampel (datestr:String? , val url:String?, val rLine:String , val niLine:String, val ibLine:String)  {
 
-    val indicator_R = Indikator("R Wert", rLine)
-    val indicator_Neuinfektionen = Indikator("Neuinfektionen", niLine)
-    val indicator_Intensivauslastung = Indikator("Intensivbetten Auslastung", ibLine)
+    val indicator_R = Indikator("R Wert", rLine, R.string.info_r)
+    val indicator_Neuinfektionen = Indikator("Neuinfektionen", niLine, R.string.info_neuinfektionen)
+    val indicator_Intensivauslastung = Indikator(
+        "Intensivbetten Auslastung",
+        ibLine,
+        R.string.info_auslastung
+    )
+    val date = Date(datestr)
+
+
 
 
     override fun toString():String{
@@ -16,5 +25,6 @@ class Ampel (val rLine:String , val niLine:String, val ibLine:String){
                 "\n\n"+rLine+"\n" +niLine+"\n"+ibLine
         return s
     }
+
 
 }

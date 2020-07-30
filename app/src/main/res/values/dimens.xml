@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <dimen name="margin_small">8dp</dimen>
+  <dimen name="margin_small">2dp</dimen>
   <dimen name="margin_medium">4dp</dimen>
   <dimen name="radius_medium">8dp</dimen>
   <dimen name="bottom_bar">50dp</dimen>
+    <dimen name="ts_title">20sp</dimen>
+  <dimen name="ts_info">12sp</dimen>
+  <dimen name="ts_value">18sp</dimen>
+
+
 </resources>

@@ -19,23 +19,35 @@ android:id="@+id/indicator_ll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:layout_margin="@dimen/margin_medium"
 >
 
         <TextView
             android:id="@+id/tv_indicatortitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:text="TextView"
+            android:textSize="@dimen/ts_title"
+            android:layout_margin="@dimen/margin_small"
+             />
 
         <TextView
             android:id="@+id/tv_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            tools:layout_editor_absoluteX="7dp"
-            tools:layout_editor_absoluteY="44dp" />
+            android:textStyle="bold"
+            android:textSize="@dimen/ts_value"
+            android:layout_margin="@dimen/margin_small"
+            tools:text="TextView"/>
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/ts_info"
+            android:layout_margin="@dimen/margin_small"
+            tools:text="TextView" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

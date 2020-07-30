@@ -2,6 +2,7 @@ package com.cane.coronaampel
 
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -16,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.nio.charset.Charset
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import java.text.SimpleDateFormat
 
 
 class MainActivity : AppCompatActivity() {
@@ -59,7 +61,11 @@ runOnUiThread {
     cv_intensiv.setIndicator(ampel.indicator_Intensivauslastung)
     cv_r.setIndicator(ampel.indicator_R)
     cv_ni.setIndicator(ampel.indicator_Neuinfektionen)
+    val simpleDateFormat = SimpleDateFormat("dd.MM.yyyy HH:mm")
+    val date = simpleDateFormat.format(ampel.date)
+    tv_date.setText(date)
     loading_spinner.visibility = View.GONE
+    tv_url.hint = ampel.url
 }
 
     }
@@ -91,14 +97,9 @@ runOnUiThread {
             val rLine = article.lines().find { it.contains("<strong>Reproduktionszahl „R“:</strong> Wert") }
             val neuinfektionenLine = article.lines().find { it.contains("<strong>Inzidenz Neuinfektionen pro Woche:</strong> Wert") }
             val intensivLine = article.lines().get(article.lines().indexOfFirst{ it.contains("<strong>Anteil der für <span class=\"caps\">COVID</span>-19-Patient*innen benötigten Plätze auf Intensivstationen:</strong><br />") } +1)
-
-
-            val ampel = Ampel(rLine.toString(), neuinfektionenLine.toString(), intensivLine.toString())
-            val test= ampel.toString()
+            val ampel = Ampel(ampelitem.pubDate, articleUrl, rLine.toString(), neuinfektionenLine.toString(), intensivLine.toString())
 
             updateUI(ampel)
-            Log.d(logtag, test)
-            tv_debug.setText(test)
         } catch (e: Exception) {
             e.printStackTrace()
             // Handle the exception
@@ -112,5 +113,11 @@ runOnUiThread {
             parse()
         }
 
+    }
+
+    fun openPM(view: View) {
+        Log.d(logtag, tv_url.hint.toString())
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(tv_url.hint.toString()))
+        startActivity(browserIntent)
     }
 }
