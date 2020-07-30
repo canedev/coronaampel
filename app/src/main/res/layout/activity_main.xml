@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#00030303"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/bottom_bar">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,8 +60,15 @@
         android:id="@+id/tv_debug"
         android:layout_width="211dp"
         android:layout_height="629dp"
-        android:onClick="update"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="200dp" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="?android:attr/progressBarStyle"
+        android:indeterminateTint="@color/colorPrimary"
+        android:background="#66666666"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

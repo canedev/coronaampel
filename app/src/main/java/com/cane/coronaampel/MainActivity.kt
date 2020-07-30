@@ -1,11 +1,15 @@
 package com.cane.coronaampel
 
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import kotlinx.coroutines.*
 import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import com.prof.rssparser.Parser
 import kotlinx.android.synthetic.main.activity_main.*
@@ -24,6 +28,30 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         update()
     }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        // Handle item selection
+        return when (item.itemId) {
+            R.id.m_about -> {
+                startActivity(Intent(this, AboutActivity::class.java))
+                true
+            }
+            R.id.m_licenses -> {
+                startActivity(Intent(this, LicensesActivity::class.java))
+                true
+            }
+            R.id.m_update -> {
+                update()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     fun updateUI(ampel:Ampel){
 
@@ -31,6 +59,7 @@ runOnUiThread {
     cv_intensiv.setIndicator(ampel.indicator_Intensivauslastung)
     cv_r.setIndicator(ampel.indicator_R)
     cv_ni.setIndicator(ampel.indicator_Neuinfektionen)
+    loading_spinner.visibility = View.GONE
 }
 
     }
@@ -75,10 +104,10 @@ runOnUiThread {
             // Handle the exception
         }
     }
-    fun update(view: View) {
-        update()
-    }
+
     fun update() {
+        Log.d(logtag,"update")
+        loading_spinner.visibility = View.VISIBLE
         GlobalScope.launch {
             parse()
         }

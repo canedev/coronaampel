@@ -3,5 +3,5 @@
   <dimen name="margin_small">8dp</dimen>
   <dimen name="margin_medium">4dp</dimen>
   <dimen name="radius_medium">8dp</dimen>
-  <dimen name="bottom_bar">20dp</dimen>
+  <dimen name="bottom_bar">50dp</dimen>
 </resources>
