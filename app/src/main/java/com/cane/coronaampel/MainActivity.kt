@@ -21,6 +21,7 @@ import okhttp3.Request
 import java.text.SimpleDateFormat
 
 
+
 class MainActivity : AppCompatActivity() {
 
     val url = "https://www.berlin.de/presse/pressemitteilungen/index/feed?institutions%5B%5D=Presse-+und+Informationsamt+des+Landes+Berlin&institutions%5B%5D=Senatskanzlei+-+Wissenschaft+und+Forschung&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Bildung%2C+Jugend+und+Familie&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Finanzen&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Gesundheit%2C+Pflege+und+Gleichstellung&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Inneres+und+Sport&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Integration%2C+Arbeit+und+Soziales&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Justiz%2C+Verbraucherschutz+und+Antidiskriminierung&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Kultur+und+Europa&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Stadtentwicklung+und+Wohnen&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Umwelt%2C+Verkehr+und+Klimaschutz&institutions%5B%5D=Senatsverwaltung+f%C3%BCr+Wirtschaft%2C+Energie+und+Betriebe"
@@ -48,12 +49,16 @@ class MainActivity : AppCompatActivity() {
         // Handle item selection
         return when (item.itemId) {
             R.id.m_about -> {
-                startActivity(Intent(this, AboutActivity::class.java))
+                //startActivity(Intent(this, AboutActivity::class.java))
+                val intent = Intent(this, AboutActivity::class.java)
+                startActivityForResult(intent, 0)
+                overridePendingTransition(R.anim.act_from_right, R.anim.act_to_right)
                 true
             }
             R.id.m_licenses -> {
-                startActivity(Intent(this, OssLicensesMenuActivity::class.java))
-
+                val intent = Intent(this, OssLicensesMenuActivity::class.java)
+                startActivityForResult(intent, 0)
+                overridePendingTransition(R.anim.act_from_right, R.anim.act_to_right)
                 true
             }
             R.id.m_update -> {
