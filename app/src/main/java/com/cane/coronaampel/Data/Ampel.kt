@@ -22,9 +22,6 @@ class Ampel (datestr:String? , val url:String?, val rLine:String , val niLine:St
     )
     val date = Date(datestr)
 
-
-
-
     override fun toString():String{
         var s = indicator_R.toString()+"\n"+
                 indicator_Neuinfektionen.toString()+"\n"+
@@ -32,6 +29,4 @@ class Ampel (datestr:String? , val url:String?, val rLine:String , val niLine:St
                 "\n\n"+rLine+"\n" +niLine+"\n"+ibLine
         return s
     }
-
-
 }

@@ -7,7 +7,7 @@ class Indikator(val title: Int, line: String, val info: Int){
     val indicatorValue = extractNumber(line)
     val indicatorColor = extractColor(line)
 
-    fun extractColor(line: String): Ampelfarbe {
+    private fun extractColor(line: String): Ampelfarbe {
         val ss = line.split(" ")
         for(s:String in ss){
             Log.d("Ampel", s)
@@ -19,7 +19,7 @@ class Indikator(val title: Int, line: String, val info: Int){
         }
         return Ampelfarbe.unknown
     }
-    fun extractNumber(line: String): Double{
+    private fun extractNumber(line: String): Double{
         val ss = line.split(" ")
         for(s:String in ss){
             Log.d("Ampel", s)
