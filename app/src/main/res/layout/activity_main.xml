@@ -11,42 +11,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#00030303"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/bottom_bar">
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#00030303"
             android:orientation="vertical"
             android:weightSum="9">
 
 
-        <com.cane.coronaampel.IndicatorCardView
-            android:id="@+id/cv_r"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_medium"
-            android:layout_weight="3"
-             />
+            <com.cane.coronaampel.IndicatorCardView
+                android:id="@+id/cv_r"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3" />
 
-        <com.cane.coronaampel.IndicatorCardView
-            android:id="@+id/cv_ni"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_medium"
-            app:cardCornerRadius="@dimen/radius_medium"
-            android:layout_weight="3" />
+            <com.cane.coronaampel.IndicatorCardView
+                android:id="@+id/cv_ni"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                />
 
-        <com.cane.coronaampel.IndicatorCardView
-            android:id="@+id/cv_intensiv"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/margin_medium"
-            app:cardCornerRadius="@dimen/radius_medium"
-            android:layout_weight="3" >
-        </com.cane.coronaampel.IndicatorCardView>
+            <com.cane.coronaampel.IndicatorCardView
+                android:id="@+id/cv_intensiv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                />
 
             <TextView
                 android:id="@+id/tv_date"
@@ -62,10 +54,10 @@
                 android:layout_margin="@dimen/margin_medium"
                 android:onClick="openPM"
                 tools:text="@string/tv_pressemitteilung" />
-    </LinearLayout>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/bottom_bar"
+            android:layout_height="wrap_content"
             android:background="@color/colorPrimary"
             android:orientation="horizontal"
             >

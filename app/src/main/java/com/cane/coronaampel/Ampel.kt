@@ -6,13 +6,9 @@ import java.util.*
 
 class Ampel (datestr:String? , val url:String?, val rLine:String , val niLine:String, val ibLine:String)  {
 
-    val indicator_R = Indikator("R Wert", rLine, R.string.info_r)
-    val indicator_Neuinfektionen = Indikator("Neuinfektionen", niLine, R.string.info_neuinfektionen)
-    val indicator_Intensivauslastung = Indikator(
-        "Intensivbetten Auslastung",
-        ibLine,
-        R.string.info_auslastung
-    )
+    val indicator_R = Indikator(R.string.title_r, rLine, R.string.info_r)
+    val indicator_Neuinfektionen = Indikator(R.string.title_neuinfektionen, niLine, R.string.info_neuinfektionen)
+    val indicator_Intensivauslastung = Indikator(R.string.title_auslastung, ibLine, R.string.info_auslastung)
     val date = Date(datestr)
 
 

@@ -14,7 +14,7 @@ class IndicatorCardView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : CardView(context, attrs, defStyleAttr) {
     fun setIndicator(indicator: Indikator) {
-        setCardBackgroundColor(getColorFromTLColor(indicator.indicatorColor))
+        //setCardBackgroundColor(getColorFromTLColor(indicator.indicatorColor))
         indicator_card.setCardBackgroundColor(getColorFromTLColor(indicator.indicatorColor))
         tv_indicatortitle.setText(indicator.title)
         tv_value.setText(indicator.indicatorValue.toString()+" -> "+ getColorNameFromTLColor(indicator.indicatorColor))

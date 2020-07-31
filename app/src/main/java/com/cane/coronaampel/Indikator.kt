@@ -2,7 +2,7 @@ package com.cane.coronaampel
 
 import android.util.Log
 
-class Indikator(val title: String, line: String, val info: Int){
+class Indikator(val title: Int, line: String, val info: Int){
 
     val indicatorValue = extractNumber(line)
     val indicatorColor = extractColor(line)
@@ -31,6 +31,6 @@ class Indikator(val title: String, line: String, val info: Int){
         return 0.0
     }
     override fun toString():String{
-        return title+": " + indicatorValue + "->" + indicatorColor
+        return "" + title + ": " + indicatorValue + "->" + indicatorColor
     }
 }

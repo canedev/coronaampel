@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Corona Ampel</string>
+    <string name="app_name">Berliner Corona Ampel</string>
     <string name="update">Aktualisieren</string>
     <string name="about">Über</string>
     <string name="licenses">Open Source Lizenzen</string>
@@ -12,6 +12,10 @@
     <string name="unknown">unbekannt</string>
     <string name="tv_pressemitteilung">Pressemitteilung</string>
     <string name="about_text">Die App soll einen schnellen Überblick über die Berliner Corona Ampel geben. Dafür wird die jeweils aktuelle Pressemitteilung der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung abgerufen und ausgewertet.</string>
-    <string name="about_author">Author: Carsten Neumann canedev@neumannmail.com</string>
+    <string name="about_data">Diese App verwendet, speichert oder versendet keine Nutzerdaten. Sie dient nur der Information des Nutzers.</string>
+    <string name="about_author">Author: Carsten Neumann\nEmail: canedev@neumannmail.com</string>
+    <string name="title_r">R Wert</string>
+    <string name="title_neuinfektionen">Neuinfektionen</string>
+    <string name="title_auslastung">Intensivbetten Auslastung</string>
 
 </resources>
