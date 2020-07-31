@@ -4,6 +4,9 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'com.google.android.gms.oss-licenses-plugin'
+
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -37,4 +40,6 @@ dependencies {
     implementation 'com.prof.rssparser:rssparser:3.0.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.google.android.gms:play-services-oss-licenses:17.0.0'
+
 }

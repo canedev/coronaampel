@@ -12,6 +12,7 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.prof.rssparser.Parser
 import kotlinx.android.synthetic.main.activity_main.*
 import java.nio.charset.Charset
@@ -43,7 +44,8 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             R.id.m_licenses -> {
-                startActivity(Intent(this, LicensesActivity::class.java))
+                startActivity(Intent(this, OssLicensesMenuActivity::class.java))
+
                 true
             }
             R.id.m_update -> {
