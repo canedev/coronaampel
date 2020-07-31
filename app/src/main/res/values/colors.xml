@@ -7,4 +7,5 @@
     <color name="tlyellow">#FFEB3B</color>
     <color name="tlgreen">#5FFC65</color>
     <color name="tlgrey">#D7DAD7</color>
+    <color name="app_bg">#eee</color>
 </resources>
