@@ -1,13 +1,13 @@
-package com.cane.coronaampel
+package com.cane.coronaampel.UI
 
 import android.content.Context
-import android.provider.Settings.Global.getString
 import android.util.AttributeSet
 import android.util.Log
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat.getColor
-import androidx.core.content.res.TypedArrayUtils.getText
+import com.cane.coronaampel.Data.Ampelfarbe
+import com.cane.coronaampel.Data.Indikator
+import com.cane.coronaampel.R
 import kotlinx.android.synthetic.main.indicatorcardview.view.*
 
 class IndicatorCardView @JvmOverloads constructor(
@@ -29,7 +29,7 @@ class IndicatorCardView @JvmOverloads constructor(
 
 
     }
-    fun getColorFromTLColor(col:Ampelfarbe): Int{
+    fun getColorFromTLColor(col: Ampelfarbe): Int{
         when(col){
             Ampelfarbe.green -> return context.getColor(R.color.tlgreen)
             Ampelfarbe.yellow -> return context.getColor(R.color.tlyellow)
@@ -37,7 +37,7 @@ class IndicatorCardView @JvmOverloads constructor(
         }
         return context.getColor(R.color.tlgrey)
     }
-    fun getColorNameFromTLColor(col:Ampelfarbe): String{
+    fun getColorNameFromTLColor(col: Ampelfarbe): String{
         when(col){
             Ampelfarbe.green -> return resources.getString(R.string.green)
             Ampelfarbe.yellow -> return resources.getString(R.string.yellow)

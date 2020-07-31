@@ -1,8 +1,9 @@
-package com.cane.coronaampel
+package com.cane.coronaampel.UI
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import com.cane.coronaampel.R
 
 class AboutActivity : AppCompatActivity() {
 
@@ -25,6 +26,9 @@ class AboutActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        overridePendingTransition(R.anim.act_from_right, R.anim.act_to_right);
+        overridePendingTransition(
+            R.anim.act_from_right,
+            R.anim.act_to_right
+        );
     }
 }

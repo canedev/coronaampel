@@ -1,4 +1,4 @@
-package com.cane.coronaampel
+package com.cane.coronaampel.Data
 
 import android.util.Log
 
@@ -7,7 +7,7 @@ class Indikator(val title: Int, line: String, val info: Int){
     val indicatorValue = extractNumber(line)
     val indicatorColor = extractColor(line)
 
-    fun extractColor(line: String): Ampelfarbe{
+    fun extractColor(line: String): Ampelfarbe {
         val ss = line.split(" ")
         for(s:String in ss){
             Log.d("Ampel", s)

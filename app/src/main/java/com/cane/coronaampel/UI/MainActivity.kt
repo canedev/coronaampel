@@ -1,17 +1,18 @@
-package com.cane.coronaampel
+package com.cane.coronaampel.UI
 
 import android.content.Intent
-import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import kotlinx.coroutines.*
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import com.cane.coronaampel.Data.Ampel
+import com.cane.coronaampel.Data.Ampelfarbe
+import com.cane.coronaampel.R
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
 import com.prof.rssparser.Parser
 import kotlinx.android.synthetic.main.activity_main.*
@@ -32,10 +33,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         //todo use real data again
         //update()
-        val fakeampel = Ampel("Tue, 28 Jan 2020 21:36:00 +0200", "FAKE DATA",
+        val fakeampel = Ampel(
+            "Tue, 28 Jan 2020 21:36:00 +0200", "FAKE DATA",
             "<strong>Reproduktionszahl „R“:</strong> Wert 1,40 → auf Rot",
             "<strong>Inzidenz Neuinfektionen pro Woche:</strong> Wert 25,9 → auf Gelb",
-            "Wert 1,4 % → auf Grün")
+            "Wert 1,4 % → auf Grün"
+        )
             updateUI(fakeampel)
         //-------------------
 
@@ -52,13 +55,19 @@ class MainActivity : AppCompatActivity() {
                 //startActivity(Intent(this, AboutActivity::class.java))
                 val intent = Intent(this, AboutActivity::class.java)
                 startActivityForResult(intent, 0)
-                overridePendingTransition(R.anim.act_from_right, R.anim.act_to_right)
+                overridePendingTransition(
+                    R.anim.act_from_right,
+                    R.anim.act_to_right
+                )
                 true
             }
             R.id.m_licenses -> {
                 val intent = Intent(this, OssLicensesMenuActivity::class.java)
                 startActivityForResult(intent, 0)
-                overridePendingTransition(R.anim.act_from_right, R.anim.act_to_right)
+                overridePendingTransition(
+                    R.anim.act_from_right,
+                    R.anim.act_to_right
+                )
                 true
             }
             R.id.m_update -> {
@@ -70,7 +79,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun updateUI(ampel:Ampel){
+    fun updateUI(ampel: Ampel){
 
 runOnUiThread {
     cv_intensiv.setIndicator(ampel.indicator_Intensivauslastung)
@@ -84,7 +93,7 @@ runOnUiThread {
 }
 
     }
-    fun getColorFromTLColor(col:Ampelfarbe): Int{
+    fun getColorFromTLColor(col: Ampelfarbe): Int{
         when(col){
             Ampelfarbe.green -> return getColor(R.color.tlgreen)
             Ampelfarbe.yellow -> return getColor(R.color.tlyellow)
@@ -112,7 +121,13 @@ runOnUiThread {
             val rLine = article.lines().find { it.contains("<strong>Reproduktionszahl „R“:</strong> Wert") }
             val neuinfektionenLine = article.lines().find { it.contains("<strong>Inzidenz Neuinfektionen pro Woche:</strong> Wert") }
             val intensivLine = article.lines().get(article.lines().indexOfFirst{ it.contains("<strong>Anteil der für <span class=\"caps\">COVID</span>-19-Patient*innen benötigten Plätze auf Intensivstationen:</strong><br />") } +1)
-            val ampel = Ampel(ampelitem.pubDate, articleUrl, rLine.toString(), neuinfektionenLine.toString(), intensivLine.toString())
+            val ampel = Ampel(
+                ampelitem.pubDate,
+                articleUrl,
+                rLine.toString(),
+                neuinfektionenLine.toString(),
+                intensivLine.toString()
+            )
 
             updateUI(ampel)
         } catch (e: Exception) {
