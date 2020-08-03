@@ -1,7 +1,7 @@
-package com.cane.coronaampel.Network
+package com.cane.coronaampel.network
 
-import com.cane.coronaampel.Data.Ampel
-import com.cane.coronaampel.UI.MainActivity
+import com.cane.coronaampel.data.Ampel
+import com.cane.coronaampel.ui.MainActivity
 import com.prof.rssparser.Parser
 import okhttp3.OkHttpClient
 import okhttp3.Request

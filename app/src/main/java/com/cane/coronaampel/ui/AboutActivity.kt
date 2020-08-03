@@ -1,4 +1,4 @@
-package com.cane.coronaampel.UI
+package com.cane.coronaampel.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

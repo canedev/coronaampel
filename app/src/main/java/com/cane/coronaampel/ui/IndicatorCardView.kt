@@ -1,11 +1,11 @@
-package com.cane.coronaampel.UI
+package com.cane.coronaampel.ui
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.cardview.widget.CardView
-import com.cane.coronaampel.Data.Ampelfarbe
-import com.cane.coronaampel.Data.Indikator
+import com.cane.coronaampel.data.Ampelfarbe
+import com.cane.coronaampel.data.Indikator
 import com.cane.coronaampel.R
 import kotlinx.android.synthetic.main.indicatorcardview.view.*
 

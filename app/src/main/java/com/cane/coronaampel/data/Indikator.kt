@@ -1,4 +1,4 @@
-package com.cane.coronaampel.Data
+package com.cane.coronaampel.data
 
 import android.util.Log
 

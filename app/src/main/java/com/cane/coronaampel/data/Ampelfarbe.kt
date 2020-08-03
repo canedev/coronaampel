@@ -1,4 +1,4 @@
-package com.cane.coronaampel.Data
+package com.cane.coronaampel.data
 
 enum class Ampelfarbe {
     green, yellow, red, unknown
