@@ -37,7 +37,7 @@ class PressReleaseParser {
     private fun extractColor(line: String?): Ampelfarbe {
         val ss = line!!.split(" ")
         for(s:String in ss){
-            Log.d("Ampel", s)
+//            Log.d("Ampel", s)
             when (s){
                 "Grün" -> return Ampelfarbe.green
                 "Gelb" -> return Ampelfarbe.yellow
@@ -49,7 +49,7 @@ class PressReleaseParser {
     private fun extractNumber(line: String?): Double{
         val ss = line!!.split(" ")
         for(s:String in ss){
-            Log.d("Ampel", s)
+//            Log.d("Ampel", s)
             var dv = s.replace(",",".").toDoubleOrNull();
             if(dv!=null){
                 return dv
