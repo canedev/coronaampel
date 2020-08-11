@@ -13,7 +13,7 @@
     <string name="tv_pressemitteilung">Pressemitteilung</string>
     <string name="about_text">Die App soll einen schnellen Überblick über die Berliner Corona Ampel geben. Dafür wird die jeweils aktuelle Pressemitteilung der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung abgerufen und ausgewertet.</string>
     <string name="about_data">Diese App verwendet, speichert oder versendet keine Nutzerdaten. Sie dient nur der Information des Nutzers.</string>
-    <string name="about_author">Author: Carsten Neumann\nEmail: canedev@neumannmail.com</string>
+    <string name="about_author">Author: Carsten Neumann\nEmail: dev@sacree-mer.de</string>
     <string name="about_thanks">Danke an: Yuvaraj Mohanbabu</string>
     <string name="title_r">R Wert</string>
     <string name="title_neuinfektionen">Neuinfektionen</string>
