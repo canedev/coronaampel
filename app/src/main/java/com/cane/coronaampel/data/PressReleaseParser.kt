@@ -7,9 +7,13 @@ import java.util.*
 class PressReleaseParser {
     fun parsePR(article:String, articleUrl:String?, datestring:String?):Ampel{
         // all this text is (hopefully) always the same
-        val rLine = article.lines().find { it.contains("Reproduktionszahl „R“:") }
-        val neuinfektionenLine = article.lines().find { it.contains("<strong>Inzidenz Neuinfektionen pro Woche:") }
-        val intensivLine = article.lines().get(article.lines().indexOfFirst{ it.contains("<strong>Anteil der für <span class=\"caps\">COVID</span>-19-Patient*innen benötigten Plätze auf Intensivstationen:") } +1)
+        val indicators_startline = article.lines().indexOfFirst{ it.contains("steht die Ampel für die drei Indikatoren") }
+        val important_lines = article.lines().subList(indicators_startline,indicators_startline+100)
+        val rLine = important_lines.find { it.contains("Reproduktionszahl „R“") }
+        val neuinfektionenLine = important_lines.find { it.contains("Inzidenz Neuinfektionen pro Woche") }
+        //for the New infections take 2 lines because sometimes the value is in the next line
+        val ilinenr = important_lines.indexOfFirst{ it.contains("Anteil der für <span class=\"caps\">COVID</span>-19-Patient*innen benötigten Plätze auf Intensivstationen") }
+        val intensivLine = important_lines.get( ilinenr) + important_lines.get( ilinenr+1)
 
         val indicator_R = Indikator(
             R.string.title_r,
