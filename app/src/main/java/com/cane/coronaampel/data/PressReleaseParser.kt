@@ -7,8 +7,10 @@ import java.util.*
 class PressReleaseParser {
     fun parsePR(article:String, articleUrl:String?, datestring:String?):Ampel{
         // all this text is (hopefully) always the same
+        //find the right place to start searching
         val indicators_startline = article.lines().indexOfFirst{ it.contains("steht die Ampel für die drei Indikatoren") }
         val important_lines = article.lines().subList(indicators_startline,indicators_startline+100)
+        // search the imprtant range of lines
         val rLine = important_lines.find { it.contains("Reproduktionszahl „R“") }
         val neuinfektionenLine = important_lines.find { it.contains("Inzidenz Neuinfektionen pro Woche") }
         //for the New infections take 2 lines because sometimes the value is in the next line
