@@ -15,7 +15,9 @@
     android:layout_margin="@dimen/margin_medium"
     android:id="@+id/indicator_card"
     >
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout
 android:id="@+id/indicator_ll"
@@ -52,6 +54,6 @@ android:id="@+id/indicator_ll"
             tools:text="TextView" />
 
     </LinearLayout>
-
+</ScrollView>
 </androidx.cardview.widget.CardView>
 </androidx.cardview.widget.CardView>
