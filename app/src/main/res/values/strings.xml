@@ -11,12 +11,26 @@
     <string name="info_auslastung">Anteil &lt; 15 % = Grün\nAnteil ≥ 15 % = Gelb\nAnteil ≥ 25 % = Rot</string>
     <string name="unknown">unbekannt</string>
     <string name="tv_pressemitteilung">Pressemitteilung</string>
-    <string name="about_text">Die App soll einen schnellen Überblick über die Berliner Corona Ampel geben. Dafür wird die jeweils aktuelle Pressemitteilung der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung abgerufen und ausgewertet.</string>
-    <string name="about_data">Diese App verwendet, speichert oder versendet keine Nutzerdaten. Sie dient nur der Information des Nutzers.</string>
-    <string name="about_author">Author: Carsten Neumann\nEmail: dev@sacree-mer.de</string>
-    <string name="about_thanks">Danke an: Yuvaraj Mohanbabu</string>
+    <string name="about_data"><![CDATA[
+        <h1>Berliner Corona Ampel App</h1>
+            <p>Carsten Neumann, Jungfernstieg 3, 12207 Berlin<br>cbca@sacree-mer.de</p>
+        <h2>Datenverarbeitung</h2>
+            <p>Diese App erfasst, speichert und verarbeitet keine Daten der Nutzer.</p>
+            <p>Es wird lediglich die Webite des Landes Berlin aufgerufen. Die Datenschutzerklärung dafür finden Sie weiter unten.</p>
+            <p>Es findet innerhalb der App auch kein Tracking und keine Analyse innerhalb der App statt. Da die App über den Google Play Store vertrieben wird gebe ich weiter unten noch dessen Datenschutzerklärung mit an.</p>
+        <h2>Erklärungen</h2>
+            <p>Carsten Neumann kann keine Garantie für das Funktionieren der App geben. Er hat aber selbst ein Interesse daran, dass die App funktioniert und wird wahrscheinlich bei Nichtfunktionieren nachbessern. </p>
+            <p>Für die Daten der Indikatoren ist Carsten Neumann nicht verantwortlich. Sie werden aus der aktuellen Pressemitteilung der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung ausgelesen. Ein link zu dieser Pressemitteilung wird in der App angegeben.<br/> Die neue Pressemitteilung wird meißtens vor 19 Uhr veröffentlicht.</p>
+            <p>Die App ist Open Source und auf Github veröffentlicht (Link unten).</p>
+            <p>Der Sinn der App ist einzig, das einfache Anzeigen der 3 Indikatoren der Berliner Corona Ampel. Es steht kein kommerzielles, oder sonstwie vermarktbares Interesse dahinter. Nur der Informationsgewinn und die Lust am Programmieren.</p>
+        <h2>Links zu externen Wesites</h2>
+]]></string>
     <string name="title_r">R Wert</string>
     <string name="title_neuinfektionen">Neuinfektionen</string>
     <string name="title_auslastung">Intensivbetten Auslastung</string>
+    <string name="link_feed">Link zum RSS Feed der Senatsverwaltung für Gesundheit, Pflege und Gleichstellung - Berlin.de</string>
+    <string name="link_dp_berlin">Datenschutzerklärung - Senatsverwaltung für Gesundheit, Pflege und Gleichstellung - Berlin.de</string>
+    <string name="link_dp_google"><![CDATA[Datenschutzerklärung – Datenschutzerklärung & Nutzungsbedingungen – Google]]></string>
+    <string name="link_git">Android Projekt der App</string>
 
 </resources>

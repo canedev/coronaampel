@@ -22,20 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         update()
-
-        /* only for test / scrennshots
-            val fakeampel = Ampel(
-            "Tue, 28 Jan 2020 20:20:00 +0200", "Pressemeldung",
-            "<strong>Reproduktionszahl „R“:</strong> Wert 1,40 → auf Rot",
-            "<strong>Inzidenz Neuinfektionen pro Woche:</strong> Wert 25,9 → auf Gelb",
-            "Wert 1,4 % → auf Grün"
-        )
-        updateUI(fakeampel)
-        //-------------------
-        */
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
