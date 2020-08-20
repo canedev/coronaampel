@@ -27,7 +27,7 @@ class PressReleaseParser {
             R.string.info_neuinfektionen
         )
         val indicator_Intensivauslastung = Indikator(
-            R.string.title_neuinfektionen, extractNumber(intensivLine), extractColor(intensivLine),
+            R.string.title_auslastung, extractNumber(intensivLine), extractColor(intensivLine),
             R.string.info_auslastung
         )
 
